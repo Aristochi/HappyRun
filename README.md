@@ -18,3 +18,13 @@
 3.通过手机号，获取验证码进行用户注册
 
 ![注册](https://github.com/Aristochi/HappyRun/blob/master/image/3.jpg)
+4
+![图片描述](https://github.com/Aristochi/HappyRun/blob/master/image/4.jpg)
+
+![图片描述](https://github.com/Aristochi/HappyRun/blob/master/image/5.jpg)
+
+![图片描述](https://github.com/Aristochi/HappyRun/blob/master/image/6.jpg)
+
+![图片描述](https://github.com/Aristochi/HappyRun/blob/master/image/7.jpg)
+
+![图片描述](https://github.com/Aristochi/HappyRun/blob/master/image/8.jpg)
