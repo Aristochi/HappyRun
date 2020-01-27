@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activity.MainActivity">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/fragment_vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tabs_rg"
+        />
+<RadioGroup
+    android:id="@+id/tabs_rg"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:layout_alignParentBottom="true"
+    android:orientation="horizontal"
+    tools:ignore="ObsoleteLayoutParam">
+    <RadioButton
+    android:id="@+id/home_tab"
+    style="@style/TabRadioButton"
+    android:drawableTop="@drawable/tab_home_selector"
+    android:text="看看"/>
+    <RadioButton
+        android:id="@+id/run_tab"
+        android:text="跑跑"
+        style="@style/TabRadioButton"
+        android:drawableTop="@drawable/tab_run_selector"/>
+    <RadioButton
+        android:text="走走"
+        android:id="@+id/walk_tab"
+        style="@style/TabRadioButton"
+        android:drawableTop="@drawable/tab_walk_selector"/>
+    <RadioButton
+        android:text="帮帮"
+        android:id="@+id/settings_tab"
+        style="@style/TabRadioButton"
+        android:drawableTop="@drawable/tab_setting_selector"/>
+</RadioGroup>
+</RelativeLayout>

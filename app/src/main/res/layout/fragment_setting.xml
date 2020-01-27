@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/setting_bg"
+    android:padding="10dp">
+<RelativeLayout
+    android:id="@+id/re_setting"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    >
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/icon_image"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_centerInParent="true"
+        android:src="@mipmap/icon_avader" />
+
+
+    <TextView
+        android:layout_centerInParent="true"
+        android:id="@+id/username"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/icon_image"
+        android:text="乐道步跑"
+        android:textColor="#000"
+        android:textSize="15sp" />
+</RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/re_setting"
+        android:orientation="vertical"
+        >
+
+        <RelativeLayout
+            android:id="@+id/set_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"
+
+         >
+
+            <ImageView
+                android:id="@+id/set_change_pwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/item_edge"
+                android:src="@mipmap/icon_change_pwd" />
+
+            <TextView
+                android:layout_toEndOf="@+id/set_change_pwd"
+                android:id="@+id/set_text_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/item_edge"
+                android:layout_marginRight="@dimen/item_edge"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+               android:text="修改密码"
+                android:textColor="@color/text_color_black"
+                android:textSize="18sp" />
+            <!--android:background="@drawable/et_underline"-->
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/set_walk"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            >
+
+            <ImageView
+                android:id="@+id/set_record_walk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/item_edge"
+                android:src="@mipmap/icon_record_walk" />
+
+            <TextView
+                android:layout_toEndOf="@+id/set_record_walk"
+                android:id="@+id/set_text_walk"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/item_edge"
+                android:layout_marginRight="@dimen/item_edge"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:text="历史步数"
+                android:textColor="@color/text_color_black"
+                android:textSize="18sp" />
+            <!--android:background="@drawable/et_underline"-->
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/set_friend"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            >
+
+            <ImageView
+                android:id="@+id/set_friend_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/item_edge"
+                android:src="@mipmap/icon_friend" />
+
+            <TextView
+                android:layout_toEndOf="@+id/set_friend_icon"
+                android:id="@+id/set_text_friend"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/item_edge"
+                android:layout_marginRight="@dimen/item_edge"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:text="认识的人"
+                android:textColor="@color/text_color_black"
+                android:textSize="18sp" />
+            <!--android:background="@drawable/et_underline"-->
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/set_run"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            >
+
+            <ImageView
+                android:id="@+id/set_record_run"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/item_edge"
+                android:src="@mipmap/icon_record_run" />
+
+            <TextView
+                android:layout_toEndOf="@+id/set_record_run"
+                android:id="@+id/set_text_run"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/item_edge"
+                android:layout_marginRight="@dimen/item_edge"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:text="跑步记录"
+                android:textColor="@color/text_color_black"
+                android:textSize="18sp" />
+            <!--android:background="@drawable/et_underline"-->
+
+        </RelativeLayout>
+
+
+        <Button
+            android:id="@+id/bt_logout"
+            style="@style/Commit_Hide_Button_Style"
+            android:layout_marginLeft="@dimen/margin_edge_20"
+            android:layout_marginRight="@dimen/margin_edge_20"
+            android:background="@drawable/btn_white_selector"
+            android:enabled="true"
+            android:text="退出"
+            android:textColor="@color/red" />
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,84 @@
+apply plugin: 'com.android.application'
+apply plugin: 'realm-android'
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.example.happyrunning"
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField "boolean", "DEBUG_MODE", "false"
+        }
+        debug {
+            minifyEnabled false
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField "boolean", "DEBUG_MODE", "true"
+        }
+    }
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }
+
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support:cardview-v7:28.0.0'
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    implementation 'com.android.support:support-v4:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'de.hdodenhof:circleimageview:2.1.0'
+    //分包
+    implementation 'com.android.support:multidex:1.0.3'
+    //自定义TabLayout
+    implementation 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+    //内存泄漏检测
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.6.3'
+    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.3'
+    testImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.3'
+    //沉浸式
+    implementation 'com.gyf.immersionbar:immersionbar:2.3.3-beta15'
+    //gson
+    implementation 'com.google.code.gson:gson:2.8.5'
+    //工具类
+    implementation('com.blankj:utilcode:1.21.0') {
+        exclude group: 'com.blankj', module: 'bus'
+    }
+// RecycleVierw-Adapter
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.42'
+    //日历控件
+    implementation 'com.haibin:calendarview:3.5.4'
+    //butterknife
+    api 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+//    // RecycleVierw-Adapter
+//    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.42'
+   // 3D地图
+//    implementation 'com.amap.api:3dmap:6.8.0'
+   // 2D地图
+    implementation 'com.amap.api:map2d:5.2.0'
+  //  导航
+    implementation 'com.amap.api:navi-3dmap:6.7.0_3dmap6.8.0'
+   // 搜索
+    implementation 'com.amap.api:search:6.5.0.1'
+  //  定位
+    implementation 'com.amap.api:location:4.6.0'
+    implementation 'com.orhanobut:logger:1.8'
+
+}

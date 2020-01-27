@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/walk_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:background="@mipmap/logo_icon"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:paddingTop="@dimen/spacing_normal">
+
+            <com.flyco.tablayout.SlidingTabLayout
+                android:id="@+id/slidingTabLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/item_height"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="@dimen/margin_edge"
+                android:background="@color/transparency"
+                tl:tl_indicator_color="@color/white"
+                tl:tl_indicator_style="TRIANGLE"
+                tl:tl_textSelectColor="@color/text_color_2"
+                tl:tl_textUnselectColor="@color/text_color_3"
+                tl:tl_textsize="@dimen/textsize_5" />
+
+        </RelativeLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:overScrollMode="never" />
+
+        <Button
+            android:id="@+id/btLogin"
+            style="@style/Commit_Button_Style"
+            android:layout_marginBottom="0dp"
+            android:background="@drawable/btn_blue_selector"
+            android:text="登录" />
+
+        <Button
+            android:id="@+id/btReg"
+            style="@style/Commit_Button_Style"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/btn_green_box_selector"
+            android:text="注册"
+            android:textColor="@color/basecolor"/>
+    </LinearLayout>
+
+</LinearLayout>
