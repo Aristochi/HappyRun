@@ -128,7 +128,7 @@
         <!--开发者申请的key-->
         <meta-data
             android:name="com.amap.api.v2.apikey"
-            android:value="40e148430c6c241268956dea1054c1c0" />
+            android:value="这里填上你自己去高德开发者平台注册申请的APPID" />
 
         <!--计步定位服务-->
         <service
